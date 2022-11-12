@@ -1,0 +1,43 @@
+﻿@page
+@model RenielDavid.Preprelim.Pages.FormModel
+@{
+}
+<div class="card" style="width: 18rem;">
+<h1>@Model.Data?.Weather?.FirstOrDefault()?.Main</h1>
+<p>@Model.Data?.Weather?.FirstOrDefault()?.Description</p>
+<ul>
+    <li>Title : @Model.Data?.Main?.Temp</li>
+    <li>Title : @Model.Data?.Main?.FeelsLike</li>
+    <li>Title : @Model.Data?.Main?.Humidity</li>
+    <li>Title : @Model.Data?.Main?.Pressure</li>
+</ul>
+</div>
+
+<form method="post">
+  <div class="form-group">
+    <label for="Name">Tank Name</label>
+    <input type="text" class="form-control" id="TankName"  placeholder="Enter Tank Name">
+</div>
+
+    <div class="form-group">
+        <label for="Armament">Tank Armament</label>
+        <input type="text" class="form-control" id="TankArmament" placeholder="Enter Tank Armament">
+    </div>
+
+    <div class="form-group">
+        <label for="TopSpeed">Tank Top Speed</label>
+        <input type="text" class="form-control" id="Tank Top Speed" placeholder="Enter Tank Top Speed">
+    </div>
+
+    <div class="form-group">
+        <label for="Crew">Tank Crew</label>
+        <input type="text" class="form-control" id="TankCrew" placeholder="Enter Tank Crew">
+    </div>
+
+    <div class="form-group">
+        <label for="ArmorType">Tank Armor Type</label>
+        <input type="text" class="form-control" id="Tank Armor Type" placeholder="Enter Tank Armor type">
+    </div>
+
+    <button formmethod="get" type="submit" class="btn">Submit</button>
+</form>
